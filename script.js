@@ -18,11 +18,19 @@ window.onscroll = () => {
 }
 
 function SendMail() {
+    if (document.getElementById("fullName").value == "" ||
+    document.getElementById("email_id").value == "" ||
+    document.getElementById("message").value == "")
+    {
+        alert("Please fill in all fields");
+        return;
+    }
     var params = {
         from_name : document.getElementById("fullName").value,
         email_id : document.getElementById("email_id").value,
         message : document.getElementById("message").value,
     }
+     
     emailjs.send("service_xjcey7p", "template_6mmcpga", params).then(function (res) {
         alert("Thank you for sending a message!");
         document.getElementById("fullName").value = ""
