@@ -316,6 +316,12 @@ header.sticky {
     color: var(--text-color);
     background: #075fe4;
     font-size: 27px;
+    transition: ease-in-out;
+
+}
+
+.row i:hover {
+    background-color: #7ca2db;
 }
 
 .row h4 {
